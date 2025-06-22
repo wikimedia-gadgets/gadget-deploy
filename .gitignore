@@ -1,0 +1,12 @@
+.DS_Store
+
+.vscode
+.idea
+*.iml
+
+node_modules
+dist
+.vite
+
+repos
+server/conf.ts

@@ -1,0 +1,50 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+a.deploy {
+  text-decoration: none;
+}
+.deploy button {
+  display: block;
+  box-sizing: border-box;
+  margin: 10px 0;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 2px;
+  vertical-align: middle;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px 12px;
+  background-color: #36c;
+  color: #fff;
+  border-color: #36c;
+  transition-property: background-color,color,border-color,box-shadow;
+  transition-duration: 100ms;
+}
+.deploy button:hover {
+  cursor: pointer;
+  background-color: #3056a9;
+  border-color: #3056a9;
+}
+.deploy button:active {
+  background-color: #233566;
+  border-color: #233566;
+}
+
+/* to keep footer at bottom */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+footer {
+  margin-top: 40px;
+  position: absolute;
+  bottom: 10px;
+}
