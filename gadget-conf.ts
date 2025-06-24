@@ -8,6 +8,10 @@ interface GadgetConfiguration {
 	deployCommand: string
 	wikis: Array<keyof typeof wikiConfigurations>
 }
+interface WikiConfiguration {
+	name: string
+	apiUrl: string
+}
 
 export const gadgetConfigurations: Record<string, GadgetConfiguration> = {
 	'twinkle': {
@@ -17,7 +21,7 @@ export const gadgetConfigurations: Record<string, GadgetConfiguration> = {
 		instructions: [],
 		credentialsFilePath: 'scripts/credentials.json',
 		deployCommand: 'npm run deploy:cd',
-		wikis: [ 'testwiki', 'enwiki', 'localhost' ],
+		wikis: [ 'testwiki', 'enwiki' ],
 	},
 	'afc-helper': {
 		name: 'AfC helper',
@@ -26,11 +30,11 @@ export const gadgetConfigurations: Record<string, GadgetConfiguration> = {
 		instructions: [],
 		credentialsFilePath: 'scripts/credentials.json',
 		deployCommand: 'npm run deploy',
-		wikis: [ 'testwiki', 'enwiki', 'localhost' ],
+		wikis: [ 'testwiki', 'enwiki' ],
 	},
-} as const
+}
 
-export const wikiConfigurations = {
+export const wikiConfigurations: Record<string, WikiConfiguration> = {
 	'testwiki': {
 		name: 'Test Wikipedia',
 		apiUrl: 'https://test.wikipedia.org/w/api.php',
@@ -43,4 +47,4 @@ export const wikiConfigurations = {
 		name: 'Localhost',
 		apiUrl: 'http://localhost:4000/api.php',
 	},
-} as const
+}
