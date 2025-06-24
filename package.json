@@ -3,13 +3,20 @@
 	"version": "1.0.0",
 	"author": "Siddharth VP",
 	"license": "MIT",
+	"keywords": [
+		"mediawiki",
+		"continuous-deployment"
+	],
 	"type": "module",
 	"scripts": {
-		"start": "~/bin/node server/dist/index.js",
 		"test": "PORT=3000 node server/dist/index.js",
 		"build:client": "cd client && npm run build",
 		"build:server": "cd server && npm run build",
 		"build": "npm run build:client && npm run build:server",
-		"install": "cd client && npm install && cd ../server && npm install"
+		"install": "cd client && npm install && cd ../server && npm install",
+
+		"start": "/data/project/gadget-deploy/bin/node server/dist/index.js",
+		"restart": "webservice node18 restart",
+		"deploy": "git pull --ff-only && npm i && npm run build && npm restart"
 	}
 }
