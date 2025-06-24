@@ -26,7 +26,8 @@ Steps to add a new gadget:
 }
 ```
 Check afc-helper's [deploy.js](https://github.com/wikimedia-gadgets/afc-helper/blob/deployscript/scripts/deploy.js) for an example. The script must not prompt for any user input.
-2. Add an entry in this project's `gadget-conf.ts`:
+
+2. Raise a PR to add an entry in `gadget-conf.ts`:
 ```typescript
 export const gadgetConfigurations = {
     'new-gadget': {
@@ -42,6 +43,7 @@ export const gadgetConfigurations = {
     // ... existing gadgets
 }
 ```
+
 3. Clone the gadget's git repo on the Toolforge project:
 ```bash
 ssh toolforge
