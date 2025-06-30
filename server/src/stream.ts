@@ -107,7 +107,13 @@ router.get('/stream', async (req, res) => {
 		return outputFailure(`ERROR: Failed to write credentials.json: ${e.message}`);
 	}
 
-	const env = { ...process.env, FORCE_COLOR: 'true' };
+	const env = {
+		...process.env,
+		// For colorized logging
+		FORCE_COLOR: 'true',
+		// Use the node.js version from home directory, instead of the container default which is too outdated
+		PATH: `${process.env.HOME}/bin:${process.env.PATH}`
+	};
 
 	async function runCommand(cmd, args, label, cwd) {
 		return new Promise<void>((resolve, reject) => {
