@@ -39,7 +39,7 @@ export function Result() {
 }
 
 function Error({ msg }: {msg: string}) {
-    return <span style={{color: 'red', fontWeight: 'bold'}}>{msg}</span>
+    return <span style={{color: 'red', fontWeight: 'bold', fontSize: 'larger'}}>{msg}</span>
 }
 
 function streamDeploymentUpdates(
@@ -56,16 +56,26 @@ function streamDeploymentUpdates(
         console.log('Connected to stream');
     }
     source.onmessage = function (msg) {
-        let text = atob(msg.data);
+        const text = atob(msg.data);
+        const returnText = <div style={{fontWeight: 'bold', fontSize: 'larger', marginTop: '30px'}}>
+            <a href="/">
+                ← Return to Wikimedia Gadget Deployer
+            </a>
+        </div>
+
         if (text === 'end:success') {
-            setStatus(
-                <span style={{fontWeight: 'bold', color: 'green'}}>Twinkle deployment completed successfully :)</span>
-            )
+            setStatus(<>
+                <span style={{fontWeight: 'bold', fontSize: 'larger', color: 'green'}}>
+                    {gadgetId} deployment completed successfully :)
+                </span>
+                {returnText}
+            </>)
             finish();
         } else if (text === 'end:failure') {
             setStatus(<>
                 <Error msg="Deployment unsuccessful :("></Error><br/>
                 <span>Please see the error message above.</span>
+                {returnText}
             </>)
 			finish();
         } else {
