@@ -17,7 +17,9 @@ export function Landing() {
 			<h2>Wikimedia Gadget Deployer</h2>
 			
 			<label htmlFor="selector">Select gadget: </label>
-			<select id="selector" 
+			<select
+				id="selector"
+				style={{ fontSize: '1.1rem', padding: '0.2rem', minWidth: '200px' }}
 				onChange={(e) => setGadget(e.target.value as GadgetId)} 
 				value={gadget}
 			>
