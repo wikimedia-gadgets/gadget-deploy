@@ -16,7 +16,7 @@
 		"install": "cd client && npm install && cd ../server && npm install",
 
 		"start": "/data/project/gadget-deploy/bin/node server/dist/index.js",
-		"restart": "toolforge webservice --mem 2Gi --cpu 3 node18 restart",
+		"restart": "toolforge webservice --mem 2Gi --cpu 2 node18 restart",
 		"deploy": "git pull --ff-only && npm i && npm run build && npm restart"
 	}
 }

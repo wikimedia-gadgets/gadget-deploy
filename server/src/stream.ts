@@ -112,7 +112,9 @@ router.get('/stream', async (req, res) => {
 		// For colorized logging
 		FORCE_COLOR: 'true',
 		// Use the node.js version from home directory, instead of the container default which is too outdated
-		PATH: `${process.env.HOME}/bin:${process.env.PATH}`
+		PATH: `${process.env.HOME}/bin:${process.env.PATH}`,
+		// Enable scripts to know they're running in the deployment service
+		IN_DEPLOY_SERVICE: '1'
 	};
 
 	async function runCommand(cmd, args, label, cwd) {
