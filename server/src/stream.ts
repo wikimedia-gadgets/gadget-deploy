@@ -143,7 +143,7 @@ router.get('/stream', async (req, res) => {
 			await runCommand('git', ['checkout', gadgetConf.branch], 'git checkout', repoPath);
 		}
 		await runCommand('git', ['pull', '--ff-only', 'origin', gadgetConf.branch], 'git pull', repoPath);
-		await runCommand('npm', ['install'], 'npm install', repoPath);
+		await runCommand('npm', ['ci'], 'npm ci', repoPath);
 
 		if (gadgetConf.buildCommand) {
 			const [program, ...args] = gadgetConf.buildCommand.split(' ');
