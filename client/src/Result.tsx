@@ -1,7 +1,6 @@
 import { useEffect, useState, type JSX } from "react";
 import { gadgetConfigurations, wikiConfigurations } from "../../gadget-conf.ts";
 import type { GadgetId, WikiId } from "./types";
-import {BACKEND_URL} from "./consts.ts";
 
 export function Result() {
     const urlParams = new URLSearchParams(location.search);
@@ -50,7 +49,7 @@ function streamDeploymentUpdates(
     setStatus: React.Dispatch<React.SetStateAction<JSX.Element>>,
     setIsLoading: React.Dispatch<React.SetStateAction<boolean>>,
 ) {
-    const source = new EventSource(`${BACKEND_URL}/stream?code=${code}&gadget=${gadgetId}&wiki=${wikiId}`);
+    const source = new EventSource(`/stream?code=${code}&gadget=${gadgetId}&wiki=${wikiId}`);
 
     source.onopen = function () {
         console.log('Connected to stream');

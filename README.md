@@ -159,7 +159,7 @@ The application will be available at:
 - **Frontend**: http://localhost:3000
 - **Backend**: http://localhost:3001
 
-The `PORT` environment variable can be used to configure the ports on which client and server run. The client connects to the server using the VITE_BACKEND_URL configured in `.env.development` file.
+The `PORT` environment variable can be used to configure the ports on which client and server run. Backend API calls are also sent to the frontend URL. Vite proxies them to the backend (see configuration in vite.config.ts).
 
 ### Production mode
 

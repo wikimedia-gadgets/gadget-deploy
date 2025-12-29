@@ -2,7 +2,6 @@ import {useState} from "react";
 import { gadgetConfigurations, wikiConfigurations } from "../../gadget-conf.ts";
 import './index.css';
 import type { DeployProps, GadgetId } from "./types.ts";
-import {BACKEND_URL} from "./consts.ts";
 
 export function Landing() {
 	const [gadget, setGadget] = useState<GadgetId>(Object.keys(gadgetConfigurations)[0] as GadgetId);
@@ -62,7 +61,7 @@ function Button({ gadget, wiki }: DeployProps) {
 	return (
 		<a className="deploy"
 			href={
-				BACKEND_URL + '/initiate' +
+				'/initiate' +
 				'?gadget=' + gadget +
 				'&wiki=' + wiki
 			}
