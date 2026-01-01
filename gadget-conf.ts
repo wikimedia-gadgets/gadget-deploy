@@ -33,7 +33,7 @@ export const gadgetConfigurations: Record<string, GadgetConfiguration> = {
 		wikis: [ 'testwiki', 'enwiki' ],
 	},
 	'xfdcloser': {
-        name: 'XfD Closer',
+        name: 'XFDcloser',
         branch: 'master',
         branchUrl: 'https://github.com/wikimedia-gadgets/xfdcloser/commits/master',
         instructions: [],
