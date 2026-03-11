@@ -31,6 +31,14 @@ export const gadgetConfigurations: Record<string, GadgetConfiguration> = {
 		credentialsFilePath: 'scripts/credentials.json',
 		deployCommand: 'npm run deploy',
 		wikis: [ 'testwiki', 'enwiki' ],
+	},'c-helper': {
+		name: 'c-helper',
+		branch: 'master',
+		branchUrl: 'https://github.com/wikimedia-gadgets/twinkle/commits/master',
+		instructions: [],
+		credentialsFilePath: 'scripts/credentials.json',
+		deployCommand: 'npm run deploy:cd',
+		wikis: [ 'testwiki', 'enwiki' ],
 	},
 }
 
