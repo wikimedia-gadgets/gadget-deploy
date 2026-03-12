@@ -33,8 +33,8 @@ export const gadgetConfigurations: Record<string, GadgetConfiguration> = {
 		wikis: [ 'testwiki', 'enwiki' ],
 	},'c-helper': {
 		name: 'c-helper',
-		branch: 'master',
-		branchUrl: 'https://github.com/wikimedia-gadgets/twinkle/commits/master',
+		branch: 'main',
+		branchUrl: 'https://gitlab.wikimedia.org/spartanarbinger/c-helper-codex-version/-/tree/main',
 		instructions: [],
 		credentialsFilePath: 'scripts/credentials.json',
 		deployCommand: 'npm run deploy:cd',
@@ -50,6 +50,9 @@ export const wikiConfigurations: Record<string, WikiConfiguration> = {
 	'enwiki': {
 		name: 'English Wikipedia',
 		apiUrl: 'https://en.wikipedia.org/w/api.php',
+	},'frwiki': {
+		name: 'french Wikipedia',
+		apiUrl: 'https://fr.wikipedia.org/w/api.php',
 	},
 	'localhost': {
 		name: 'Localhost',
