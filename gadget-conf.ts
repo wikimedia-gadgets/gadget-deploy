@@ -38,7 +38,7 @@ export const gadgetConfigurations: Record<string, GadgetConfiguration> = {
 		instructions: [],
 		credentialsFilePath: 'scripts/credentials.json',
 		deployCommand: 'npm run deploy:cd',
-		wikis: [ 'testwiki', 'enwiki' ],
+		wikis: [ 'testwiki', 'enwiki','frwiki'],
 	},
 }
 
