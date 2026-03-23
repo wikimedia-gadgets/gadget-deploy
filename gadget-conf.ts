@@ -41,6 +41,15 @@ export const gadgetConfigurations: Record<string, GadgetConfiguration> = {
 		deployCommand: 'npm run deploy:cd',
 		wikis: [ 'testwiki','frwiki'],
 	},
+	'xfdcloser': {
+        name: 'XFDcloser',
+        branch: 'master',
+        branchUrl: 'https://github.com/wikimedia-gadgets/xfdcloser/commits/master',
+        instructions: [],
+        credentialsFilePath: 'bin/credentials.json',
+        deployCommand: 'npm run deploy',
+        wikis: ['testwiki', 'enwiki']
+    },
 }
 
 export const wikiConfigurations: Record<string, WikiConfiguration> = {
