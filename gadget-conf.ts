@@ -31,7 +31,8 @@ export const gadgetConfigurations: Record<string, GadgetConfiguration> = {
 		credentialsFilePath: 'scripts/credentials.json',
 		deployCommand: 'npm run deploy',
 		wikis: [ 'testwiki', 'enwiki' ],
-	},'c-helper': {
+	},
+	'c-helper': {
 		name: 'c-helper',
 		branch: 'main',
 		branchUrl: 'https://gitlab.wikimedia.org/spartanarbinger/c-helper-codex-version/-/tree/main',
