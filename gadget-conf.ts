@@ -52,7 +52,7 @@ export const wikiConfigurations: Record<string, WikiConfiguration> = {
 		name: 'English Wikipedia',
 		apiUrl: 'https://en.wikipedia.org/w/api.php',
 	},'frwiki': {
-		name: 'french Wikipedia',
+		name: 'French Wikipedia',
 		apiUrl: 'https://fr.wikipedia.org/w/api.php',
 	},
 	'localhost': {
