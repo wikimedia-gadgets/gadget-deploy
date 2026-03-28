@@ -32,6 +32,15 @@ export const gadgetConfigurations: Record<string, GadgetConfiguration> = {
 		deployCommand: 'npm run deploy',
 		wikis: [ 'testwiki', 'enwiki' ],
 	},
+	'c-helper': {
+		name: 'C-helper',
+		branch: 'main',
+		branchUrl: 'https://gitlab.wikimedia.org/spartanarbinger/c-helper-codex-version/-/tree/main',
+		instructions: [],
+		credentialsFilePath: 'scripts/credentials.json',
+		deployCommand: 'npm run deploy:cd',
+		wikis: [ 'testwiki','frwiki'],
+	},
 	'xfdcloser': {
         name: 'XFDcloser',
         branch: 'master',
@@ -51,6 +60,10 @@ export const wikiConfigurations: Record<string, WikiConfiguration> = {
 	'enwiki': {
 		name: 'English Wikipedia',
 		apiUrl: 'https://en.wikipedia.org/w/api.php',
+	},
+	'frwiki': {
+		name: 'French Wikipedia',
+		apiUrl: 'https://fr.wikipedia.org/w/api.php',
 	},
 	'localhost': {
 		name: 'Localhost',
